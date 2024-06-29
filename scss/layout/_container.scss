@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  @include container();
+
+  &-full {
+    width: 100% !important;
+    @include container()
+  }
+
+  @each $point, $value in $breakpoints {
+    & {
+      @include breakpoints($point) {
+        max-width: $value;
+      }
+    }
+
+    &-#{$point} {
+      @include container();
+      max-width: $value;
+    }
+
+  }
+
+  @for $i from 0 through 100 {
+    &-#{$i}p {
+      width: calc($i * 1%);
+    }
+  }
+}

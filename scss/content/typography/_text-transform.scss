@@ -1,0 +1,5 @@
+@each $name, $value in $ch-text-transform {
+  .#{$name} {
+    text-transform: $value;
+  }
+}

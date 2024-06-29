@@ -1,0 +1,11 @@
+@each $property, $map in $ch-align {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+  .a-#{$prefix} {
+    @each $unit, $value in $values {
+      &-#{$unit} {
+        align-#{$property}: $value;
+      }
+    }
+  }
+}

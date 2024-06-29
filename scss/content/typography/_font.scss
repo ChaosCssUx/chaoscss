@@ -1,0 +1,29 @@
+@for $i from 0 through $ch-extend {
+  .fs-#{$i} {
+    font-size: $i + (px);
+  }
+}
+
+@for $i from 0 through 9 {
+  .fw-#{$i} {
+    font-weight: calc($i * 100);
+  }
+}
+
+@each $property, $map in $ch-font {
+  @if ($property =="family") {
+    @each $unit, $value in $map {
+      .#{$unit} {
+        font-family: $value;
+      }
+    }
+  }
+
+  @else {
+    @each $unit, $value in $map {
+      .fs-#{$unit} {
+        font-style: $value;
+      }
+    }
+  }
+}

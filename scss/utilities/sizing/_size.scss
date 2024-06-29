@@ -1,0 +1,50 @@
+.size {
+  @for $i from 0 through $ch-extend {
+    &-#{$i} {
+      height: $i + (px);
+      width: $i + (px);
+    }
+
+    &-min-#{$i} {
+      min-height: $i + (px);
+      min-width: $i + (px);
+    }
+
+    &-max-#{$i} {
+      max-height: $i + (px);
+      max-width: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    &-#{$i}p {
+      height: calc($i * 1%);
+      width: calc($i * 1%);
+    }
+
+    &-min-#{$i}p {
+      min-height: calc($i * 1%);
+      min-width: calc($i * 1%);
+    }
+
+    &-max-#{$i}p {
+      max-height: calc($i * 1%);
+      max-width: calc($i * 1%);
+    }
+  }
+
+  &-screen {
+    @include sizing(height, h);
+    @include sizing(width, w);
+  }
+
+  &-min-screen {
+    @include sizing(min-height, h);
+    @include sizing(min-width, w)
+  }
+
+  &-max-screen {
+    @include sizing(max-height, h);
+    @include sizing(max-width, w);
+  }
+}

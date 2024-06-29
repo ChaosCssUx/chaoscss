@@ -1,0 +1,5 @@
+@each $name, $value in $ch-display {
+  .#{$name} {
+    display: $value;
+  }
+}

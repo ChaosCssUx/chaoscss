@@ -1,0 +1,17 @@
+@each $name, $value in $ch-overflow {
+  .overflow-#{$name} {
+    overflow: $value;
+  }
+}
+
+@each $name, $value in $ch-overflow-x {
+  .overflow-x-#{$name} {
+    overflow-x: $value;
+  }
+}
+
+@each $name, $value in $ch-overflow-y {
+  .overflow-y-#{$name} {
+    overflow-y: $value;
+  }
+}

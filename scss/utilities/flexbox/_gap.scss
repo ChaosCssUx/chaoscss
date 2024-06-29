@@ -1,0 +1,15 @@
+@for $i from 0 through $ch-extend {
+  .gap {
+    & {
+      gap: $i + (px);
+    }
+
+    &-x {
+      column-gap: $i + (px);
+    }
+
+    &-y {
+      row-gap: $i + (px);
+    }
+  }
+}

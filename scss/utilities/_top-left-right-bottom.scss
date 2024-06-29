@@ -1,0 +1,35 @@
+@for $i from 0 through $ch-extend {
+  .t-#{$i} {
+    top: $i + (px);
+  }
+
+  .l-#{$i} {
+    left: $i + (px);
+  }
+
+  .r-#{$i} {
+    right: $i + (px);
+  }
+
+  .b-#{$i} {
+    bottom: $i + (px);
+  }
+}
+
+@for $i from 0 through 100 {
+  .t-#{$i}p {
+    top: calc($i * 1%);
+  }
+
+  .l-#{$i}p {
+    left: calc($i * 1%);
+  }
+
+  .r-#{$i}p {
+    right: calc($i * 1%);
+  }
+
+  .b-#{$i}p {
+    bottom: calc($i * 1%);
+  }
+}

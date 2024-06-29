@@ -1,0 +1,116 @@
+.rounded {
+  @for $i from 0 through $ch-extend {
+    &-#{$i} {
+      border-radius: $i + (px);
+    }
+
+    &-s-#{$i} {
+      border-start-start-radius: $i + (px);
+      border-start-end-radius: $i + (px);
+    }
+
+    &-ss-#{$i} {
+      border-start-start-radius: $i + (px);
+    }
+
+    &-e-#{$i} {
+      border-end-end-radius: $i + (px);
+      border-end-start-radius: $i + (px);
+    }
+
+    &-ee-#{$i} {
+      border-end-end-radius: $i + (px);
+    }
+
+    &-se-#{$i} {
+      border-start-end-radius: $i + (px);
+    }
+
+    &-es-#{$i} {
+      border-end-start-radius: $i + (px);
+    }
+
+    &-t-#{$i} {
+      border-top-left-radius: $i + (px);
+      border-top-right-radius: $i + (px);
+    }
+
+    &-b-#{$i} {
+      border-bottom-left-radius: $i + (px);
+      border-bottom-right-radius: $i + (px);
+    }
+
+    &-l-#{$i} {
+      border-top-left-radius: $i + (px);
+      border-bottom-left-radius: $i + (px);
+    }
+
+    &-r-#{$i} {
+      border-top-right-radius: $i + (px);
+      border-bottom-right-radius: $i + (px);
+    }
+
+    &-tr-#{$i} {
+      border-top-right-radius: $i + (px);
+    }
+
+    &-tl-#{$i} {
+      border-top-left-radius: $i + (px);
+    }
+
+    &-br-#{$i} {
+      border-bottom-right-radius: $i + (px);
+    }
+
+    &-bl-#{$i} {
+      border-bottom-left-radius: $i + (px);
+    }
+  }
+}
+
+.border {
+  border-width: 1px;
+  border-color: map-get($clrs, "gray");
+  border-style: solid;
+}
+
+
+@for $i from 0 through $ch-extend {
+  .border {
+    &-#{$i} {
+      border-width: $i + (px);
+    }
+
+    &-x-#{$i} {
+      border-left-width: $i + (px);
+      border-right-width: $i + (px);
+    }
+
+    &-y-#{$i} {
+      border-bottom-width: $i + (px);
+      border-top-width: $i + (px);
+    }
+
+    &-t-#{$i} {
+      border-top-width: $i + (px);
+    }
+
+    &-b-#{$i} {
+      border-bottom-width: $i + (px);
+    }
+  }
+
+  .line-#{$i} {
+    outline-width: $i + (px);
+  }
+}
+
+@each $name, $value in $ch-border-style {
+  .border-#{$name} {
+    border-style: $value;
+  }
+
+  .line-#{$name} {
+    outline-style: $value;
+  }
+}

@@ -1,0 +1,41 @@
+.h {
+  @for $i from 0 through $ch-extend {
+    &-#{$i} {
+      height: $i + (px);
+    }
+
+    &-min-#{$i} {
+      min-height: $i + (px);
+    }
+
+    &-max-#{$i} {
+      max-height: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    &-#{$i} {
+      height: calc($i * 1%);
+    }
+
+    &-min-#{$i}p {
+      min-height: calc($i * 1%);
+    }
+
+    &-max-#{$i}p {
+      max-height: calc($i * 1%);
+    }
+  }
+
+  &-screen {
+    @include sizing(height, h)
+  }
+
+  &-min-screen {
+    @include sizing(min-height, h)
+  }
+
+  &-max-screen {
+    @include sizing(max-height, h)
+  }
+}

@@ -1,0 +1,29 @@
+@each $property, $map in $ch-decor {
+  @if ($property =="line") {
+    @each $unit , $value in $map {
+      .#{$unit} {
+        text-decoration-#{$property}: $value;
+      }
+    }
+  }
+
+  @if ($property !="line") {
+    @each $unit , $value in $map {
+      .decor-#{$unit} {
+        text-decoration-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 16 {
+  .decor-#{$i} {
+    text-decoration-thickness: $i + (px);
+  }
+}
+
+@for $i from 0 through 16 {
+  .decor-offset-#{$i} {
+    text-underline-offset: $i + (px);
+  }
+}

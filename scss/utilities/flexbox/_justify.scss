@@ -1,0 +1,12 @@
+@each $property, $map in $ch-justify {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  .j-#{$prefix} {
+    @each $unit, $value in $values {
+      &-#{$unit} {
+        justify-#{$property}: $value;
+      }
+    }
+  }
+}

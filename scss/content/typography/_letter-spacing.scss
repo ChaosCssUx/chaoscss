@@ -1,0 +1,11 @@
+@for $i from 1 through 16 {
+  .ls-tight-#{$i} {
+    letter-spacing: calc($i - ($i * 2)) + (px);
+  }
+}
+
+@for $i from 1 through 16 {
+  .ls-wide-#{$i} {
+    letter-spacing: $i + (px);
+  }
+}

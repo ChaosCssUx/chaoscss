@@ -1,0 +1,9 @@
+@for $i from 0 through $ch-extend {
+  .z-#{$i} {
+    z-index: $i;
+  }
+
+  .z-n#{$i} {
+    z-index: calc($i - ($i * 2));
+  }
+}

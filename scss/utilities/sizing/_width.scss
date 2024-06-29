@@ -1,0 +1,41 @@
+.w {
+  @for $i from 0 through $ch-extend {
+    &-#{$i} {
+      width: $i + (px);
+    }
+
+    &-min-#{$i} {
+      min-width: $i + (px);
+    }
+
+    &-max-#{$i} {
+      max-width: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    & {
+      width: calc($i * 1%);
+    }
+
+    &-min-#{$i}p {
+      min-width: calc($i * 1%);
+    }
+
+    &-max-#{$i}p {
+      max-width: calc($i * 1%);
+    }
+  }
+
+  &-screen {
+    @include sizing(width, w)
+  }
+
+  &-min-screen {
+    @include sizing(min-width, w)
+  }
+
+  &-max-screen {
+    @include sizing(max-width, w)
+  }
+}

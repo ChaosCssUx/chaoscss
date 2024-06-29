@@ -1,0 +1,121 @@
+@mixin container($padding-x: 15px) {
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin spacing($space-type, $i, $prefix) {
+  .#{$prefix} {
+    &-#{$i} {
+      #{$space-type}: $i + (px) !important;
+    }
+
+    &l-#{$i} {
+      #{$space-type}-left: $i + (px) !important;
+    }
+
+    &r-#{$i} {
+      #{$space-type}-right: $i + (px) !important;
+    }
+
+    &t-#{$i} {
+      #{$space-type}-top: $i + (px) !important;
+    }
+
+    &b-#{$i} {
+      #{$space-type}-bottom: $i + (px) !important;
+    }
+
+    &x-#{$i} {
+      #{$space-type}-left: $i + (px) !important;
+      #{$space-type}-right: $i + (px) !important;
+    }
+
+    &y-#{$i} {
+      #{$space-type}-top: $i + (px) !important;
+      #{$space-type}-bottom: $i + (px) !important;
+    }
+  }
+}
+
+@mixin precentSpacing($space-type, $i, $prefix) {
+  .#{$prefix} {
+    &-#{$i}p {
+      #{$space-type}: calc($i * 1%);
+    }
+
+    &l-#{$i}p {
+      #{$space-type}-left: calc($i * 1%);
+    }
+
+    &r-#{$i}p {
+      #{$space-type}-right: calc($i * 1%);
+    }
+
+    &t-#{$i}p {
+      #{$space-type}-top: calc($i * 1%);
+    }
+
+    &b-#{$i}p {
+      #{$space-type}-bottom: calc($i * 1%);
+    }
+
+    &x-#{$i}p {
+      #{$space-type}-left: calc($i * 1%);
+      #{$space-type}-right: calc($i * 1%);
+    }
+
+    &y-#{$i}p {
+      #{$space-type}-top: calc($i * 1%);
+      #{$space-type}-bottom: calc($i * 1%);
+    }
+  }
+}
+
+@mixin color($prefix, $unit) {
+  @each $name, $value in $clrs {
+    .#{$prefix} {
+      &-#{$name} {
+        #{$unit}: $value;
+      }
+
+      @if $name =="white" or $name =="light" {
+        @for $i from 0 through 10 {
+          &-#{$name}-#{$i} {
+            #{$unit}: colorMix(#000, $value, $i);
+          }
+        }
+      }
+
+      @else {
+        @for $i from 0 through 10 {
+          &-#{$name}-#{$i} {
+            #{$unit}: colorMix(#fff, $value, $i);
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $value in $clrs-rgba {
+    @for $i from 0 through 9 {
+      .#{$prefix}-#{$name}-opacity-#{$i} {
+        #{$unit}: colorOpacity($value, calc($i / 10));
+      }
+    }
+  }
+}
+
+@mixin sizing($unit, $type) {
+  #{$unit}: 100v + $type
+}
+
+@mixin default-btn() {
+  padding: 10px 30px !important;
+  font-size: $ch-default-btn-font-size !important;
+  border-radius: $ch-default-btn-radius !important;
+  background-color: $ch-default-btn-bg !important;
+  border: $ch-default-btn-border;
+  color: $ch-default-btn-color;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "chaoscss",
+  "version": "1.0.1",
+  "description": "Framework for easy decoration and design in web.",
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaosCssUx/chaoscssux.github.io.git"
+  },
+  "keywords": [
+    "front-end",
+    "framework",
+    "css",
+    "sass",
+    "web",
+    "lib"
+  ],
+  "author": "The ChaosCss authors (https://github.com/ChaosCssUx/chaoscssux.github.io/graphs/contributors)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChaosCssUx/chaoscssux.github.io/issues"
+  },
+  "homepage": "https://github.com/ChaosCssUx/chaoscssux.github.io#readme",
+  "files": [
+    "dist/*",
+    "scss/*"
+  ],
+  "devDependencies": {
+    "autoprefix": "^1.0.1",
+    "cssnano": "^7.0.3",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6",
+    "sass-true": "^8.0.0",
+    "stylelint": "^16.6.1"
+  }
+}

@@ -1,0 +1,31 @@
+@for $i from 0 through $ch-extend {
+  .inset-#{$i} {
+    inset: $i + (px);
+  }
+
+  .inset-x-#{$i} {
+    left: $i + (px);
+    right: $i + (px);
+  }
+
+  .inset-y-#{$i} {
+    top: $i + (px);
+    bottom: $i + (px);
+  }
+}
+
+@for $i from 0 through 100 {
+  .inset-#{$i}p {
+    inset: calc($i * 1%);
+  }
+
+  .inset-x-#{$i}p {
+    left: calc($i * 1%);
+    right:calc($i * 1%);
+  }
+
+  .inset-y-#{$i}p {
+    top: calc($i * 1%);
+    bottom: calc($i * 1%);
+  }
+}

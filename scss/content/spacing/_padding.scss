@@ -1,0 +1,7 @@
+@for $i from 0 through $ch-extend {
+  @include spacing(padding, $i, p)
+}
+
+@for $i from 0 through 100 {
+  @include precentSpacing(padding, $i, p)
+}

@@ -1,0 +1,7 @@
+@for $i from 0 through $ch-extend {
+  @include spacing(margin, $i, m)
+}
+
+@for $i from 0 through 100 {
+  @include precentSpacing(margin, $i, m)
+}

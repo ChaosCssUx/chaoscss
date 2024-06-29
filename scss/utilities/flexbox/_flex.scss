@@ -1,0 +1,39 @@
+@each $property , $map in $ch-flex {
+  .flex {
+    @each $unit, $value in $map {
+      &-#{$unit} {
+        flex-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@for $i from 0 through $ch-extend {
+  .basis-#{$i} {
+    flex-basis: $i + (px);
+  }
+}
+
+@for $i from 0 through 100 {
+  .basis-#{$i}p {
+    flex-basis: calc($i * 1%);
+  }
+}
+
+@for $i from 0 through 10 {
+  .grow-#{$i} {
+    flex-grow: $i;
+  }
+}
+
+@for $i from 0 through 3 {
+  .shrink-#{$i} {
+    flex-shrink: $i;
+  }
+}
+
+@for $i from 0 through 64{
+  .order-#{$i}{
+    order: $i;
+  }
+}
