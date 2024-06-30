@@ -14,7 +14,7 @@
   }
 
   @for $i from 0 through 100 {
-    &-#{$i} {
+    &-#{$i}p {
       height: calc($i * 1%);
     }
 

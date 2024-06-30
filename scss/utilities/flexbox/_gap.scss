@@ -1,14 +1,14 @@
 @for $i from 0 through $ch-extend {
   .gap {
-    & {
+    &-#{$i} {
       gap: $i + (px);
     }
 
-    &-x {
+    &-x-#{$i} {
       column-gap: $i + (px);
     }
 
-    &-y {
+    &-y-#{$i} {
       row-gap: $i + (px);
     }
   }
