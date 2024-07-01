@@ -69,9 +69,23 @@
 }
 
 .border {
-  border-width: 1px;
-  border-color: map-get($clrs, "gray");
-  border-style: solid;
+  border: 1px solid map-get($clrs, "gray");
+}
+
+.border-right {
+  border-right: 1px solid map-get($clrs, "gray");
+}
+
+.border-left {
+  border-left: 1px solid map-get($clrs, "gray");
+}
+
+.border-top {
+  border-top: 1px solid map-get($clrs, "gray");
+}
+
+.border-bottom {
+  border-bottom: 1px solid map-get($clrs, "gray");
 }
 
 
@@ -91,19 +105,19 @@
       border-top-width: $i + (px);
     }
 
-    &-t-#{$i} {
+    &-top-#{$i} {
       border-top-width: $i + (px);
     }
 
-    &-b-#{$i} {
+    &-bottom-#{$i} {
       border-bottom-width: $i + (px);
     }
 
-    &-r-#{$i} {
+    &-right-#{$i} {
       border-right-width: $i + (px);
     }
 
-    &-l-#{$i} {
+    &-left-#{$i} {
       border-left-width: $i + (px);
     }
   }
