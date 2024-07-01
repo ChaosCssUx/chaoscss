@@ -128,8 +128,26 @@
 }
 
 @each $name, $value in $ch-border-style {
-  .border-#{$name} {
-    border-style: $value;
+  .border {
+    &-#{$name} {
+      border-style: $value;
+    }
+
+    &-left-#{$name} {
+      border-left-style: $value;
+    }
+
+    &-right-#{$name} {
+      border-right-style: $value;
+    }
+
+    &-top-#{$name} {
+      border-top-style: $value;
+    }
+
+    &-bottom-#{$name} {
+      border-bottom-style: $value;
+    }
   }
 
   .line-#{$name} {

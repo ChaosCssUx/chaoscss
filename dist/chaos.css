@@ -73114,6 +73114,18 @@ p {
 .border-solid {
   border-style: solid;
 }
+.border-left-solid {
+  border-left-style: solid;
+}
+.border-right-solid {
+  border-right-style: solid;
+}
+.border-top-solid {
+  border-top-style: solid;
+}
+.border-bottom-solid {
+  border-bottom-style: solid;
+}
 
 .line-solid {
   outline-style: solid;
@@ -73121,6 +73133,18 @@ p {
 
 .border-dashed {
   border-style: dashed;
+}
+.border-left-dashed {
+  border-left-style: dashed;
+}
+.border-right-dashed {
+  border-right-style: dashed;
+}
+.border-top-dashed {
+  border-top-style: dashed;
+}
+.border-bottom-dashed {
+  border-bottom-style: dashed;
 }
 
 .line-dashed {
@@ -73130,6 +73154,18 @@ p {
 .border-dotted {
   border-style: dotted;
 }
+.border-left-dotted {
+  border-left-style: dotted;
+}
+.border-right-dotted {
+  border-right-style: dotted;
+}
+.border-top-dotted {
+  border-top-style: dotted;
+}
+.border-bottom-dotted {
+  border-bottom-style: dotted;
+}
 
 .line-dotted {
   outline-style: dotted;
@@ -73137,6 +73173,18 @@ p {
 
 .border-double {
   border-style: double;
+}
+.border-left-double {
+  border-left-style: double;
+}
+.border-right-double {
+  border-right-style: double;
+}
+.border-top-double {
+  border-top-style: double;
+}
+.border-bottom-double {
+  border-bottom-style: double;
 }
 
 .line-double {
@@ -73146,6 +73194,18 @@ p {
 .border-none {
   border-style: none;
 }
+.border-left-none {
+  border-left-style: none;
+}
+.border-right-none {
+  border-right-style: none;
+}
+.border-top-none {
+  border-top-style: none;
+}
+.border-bottom-none {
+  border-bottom-style: none;
+}
 
 .line-none {
   outline-style: none;
@@ -73153,6 +73213,18 @@ p {
 
 .border-hidden {
   border-style: hidden;
+}
+.border-left-hidden {
+  border-left-style: hidden;
+}
+.border-right-hidden {
+  border-right-style: hidden;
+}
+.border-top-hidden {
+  border-top-style: hidden;
+}
+.border-bottom-hidden {
+  border-bottom-style: hidden;
 }
 
 .line-hidden {
